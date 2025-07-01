@@ -1,5 +1,5 @@
 from utel import *
-
+from datetime import datetime
 
 def cadastrar_evento(lista_eventos):
     limpar_tela()
@@ -8,8 +8,9 @@ def cadastrar_evento(lista_eventos):
     print('=' * 40)
     
     
-    nome_evento = input('Nome do evento: ')
+    nome_evento = input('Nome do evento: ').strip()
     
+    #validação de nome do evento 
     for evento in lista_eventos:
         if evento['nome'].lower() == nome_evento.lower():
             print('Evento com nome já existente.')
@@ -17,8 +18,8 @@ def cadastrar_evento(lista_eventos):
             input('Precione Enter para continuar.')
             return
     
-    data = input('Data do evento (dd/mm/aaaa): ')
-
+    #validação de data do evento
+    data = obter_data_valida()
     
     tema = input('Tema do evento: ')
 
