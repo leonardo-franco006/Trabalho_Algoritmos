@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
 

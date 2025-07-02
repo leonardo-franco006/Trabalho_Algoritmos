@@ -3,6 +3,8 @@ from eventos import *
 from participantes import *
 
 eventos = []
+participantes = []
+
 
 while True:
     op = menu_principal()
@@ -16,7 +18,7 @@ while True:
         if op_cad == 1: #cadastrar evento ao programa
             cadastrar_evento(eventos)
         elif op_cad == 2: # cadastrar participante ao programa
-            cadastrar_part()
+            cadastrar_part(participantes, eventos)
 
     
     elif op == 2:

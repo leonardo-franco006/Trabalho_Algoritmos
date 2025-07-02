@@ -1,5 +1,5 @@
 from utel import *
-from datetime import datetime
+
 
 def cadastrar_evento(lista_eventos):
     limpar_tela()
@@ -24,7 +24,7 @@ def cadastrar_evento(lista_eventos):
     tema = input('Tema do evento: ')
 
     
-    evento = {'nome': nome_evento, 'data': data, 'tema': tema, 'participantes': []}
+    evento = {'nome': nome_evento, 'data': data.date(), 'tema': tema, 'participantes': []}
     
     lista_eventos.append(evento)
     print('Evento cadastrado!')
