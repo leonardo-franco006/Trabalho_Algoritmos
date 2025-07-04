@@ -3,7 +3,7 @@ from utel import *
 def menu_principal():
     limpar_tela()
     print('=' * 40)
-    print('     SISTEMA DE EVENTOS - MENU PRINCIPAL')
+    print('  SISTEMA DE EVENTOS - MENU PRINCIPAL')
     print('=' * 40)
 
     print('[1] Cadastro')
