@@ -35,3 +35,6 @@ def obter_data_valida():
                 print('Data inválida, use apenas números no formato dd/mm/aaaa.')
         else:
             print('Formato inválido, use apenas o formato dd/mm/aaaa.')
+
+def cpf_valido(cpf):
+    return len(cpf) == 11 and cpf.isdigit()

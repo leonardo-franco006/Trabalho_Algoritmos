@@ -1,4 +1,4 @@
-from utel import *
+from util import *
 
 def menu_principal():
     limpar_tela()

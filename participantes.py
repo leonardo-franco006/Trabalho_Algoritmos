@@ -1,4 +1,4 @@
-from utel import *
+from util import *
 
 
 def cadastrar_part(lista_participantes, lista_eventos): #cadastra participantes ao sistema 
@@ -9,9 +9,15 @@ def cadastrar_part(lista_participantes, lista_eventos): #cadastra participantes 
     
     nome = input('Digite nome do participante: ').strip()
 
-    cpf = input('Digite CPF do participante: ').strip() #verifica se cpf já está cadastrado
-    for p in lista_participantes:
-        if p['cpf'] == cpf:
+    cpf = input('Digite CPF do participante: ').strip() 
+    
+    if not cpf_valido(cpf): # verifica se cpf é válido
+        print('CPF inválido. Deve conter 11 dígitos numéricos.')
+        input('Precione Enter para continuar.')
+        return    
+    
+    for p in lista_participantes: 
+        if p['cpf'] == cpf: # verifica se cpf já está cadastrado
             print('CPF já cadastrado.')
             input('Precione Enter para continuar.')
             return

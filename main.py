@@ -1,6 +1,7 @@
 from menu import *
 from eventos import *
 from participantes import *
+from estatisticas import *
 
 eventos = []
 participantes = []
@@ -47,3 +48,6 @@ while True:
     
     elif op == 3: # acessar participantes
         consultar_participantes(participantes, eventos) # consultar participantes cadastrados
+    
+    elif op == 4: # acessar estatísticas
+        gerar_estatisticas(eventos, participantes) 

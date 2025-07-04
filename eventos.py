@@ -1,4 +1,4 @@
-from utel import *
+from util import *
 
 
 def cadastrar_evento(lista_eventos):
@@ -21,9 +21,8 @@ def cadastrar_evento(lista_eventos):
     #validação de data do evento
     data = obter_data_valida()
     
-    tema = input('Tema do evento: ')
+    tema = input('Tema do evento: ').strip().title() # padroniza entrada do tema
 
-    
     evento = {'nome': nome_evento, 'data': data.date(), 'tema': tema, 'participantes': []}
     
     lista_eventos.append(evento)
@@ -45,6 +44,7 @@ def consultar_eventos(lista_eventos): # mostra eventos cadastrados, disponiveis 
         input('Precione Enter para continuar.')
         return 0
     else:
+        print('Eventos cadastrados: ')
         for i, evento in enumerate(lista_eventos, 1):
             print(f'[{i}] {evento['nome']}')
     
